@@ -1,0 +1,60 @@
+@font-face {
+  font-family: "mapfont.tokyo23";
+  src: url('./mapfont.tokyo23.eot');
+  src: url('./mapfont.tokyo23.eot?#iefix') format('eot'),
+    url('./mapfont.tokyo23.woff') format('woff'),
+    url('./mapfont.tokyo23.ttf') format('truetype'),
+    url('./mapfont.tokyo23.svg#mapfont.tokyo23') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.tokyo23 > *,
+.tokyo23-icon {
+  font-family: "mapfont.tokyo23";
+  font-style: normal;
+  font-weight: normal;
+  display: inline-block;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.tokyo23 {
+  list-style: none;
+  display: block;
+  position: relative;
+  padding: 0;
+  width: 1em;
+  height: 1em;
+}
+
+.tokyo23 > * {
+  display: block;
+  position: absolute;
+}
+
+.tokyo23 > .Adachi:before { content: "\E001" }
+.tokyo23 > .Arakawa:before { content: "\E002" }
+.tokyo23 > .Bunkyo:before { content: "\E003" }
+.tokyo23 > .Chiyoda:before { content: "\E004" }
+.tokyo23 > .Chuo:before { content: "\E005" }
+.tokyo23 > .Edogawa:before { content: "\E006" }
+.tokyo23 > .Itabashi:before { content: "\E007" }
+.tokyo23 > .Katsushika:before { content: "\E008" }
+.tokyo23 > .Kita:before { content: "\E009" }
+.tokyo23 > .Koto:before { content: "\E00A" }
+.tokyo23 > .Meguro:before { content: "\E00B" }
+.tokyo23 > .Minato:before { content: "\E00C" }
+.tokyo23 > .Nakano:before { content: "\E00D" }
+.tokyo23 > .Nerima:before { content: "\E00E" }
+.tokyo23 > .Ota:before { content: "\E00F" }
+.tokyo23 > .Setagaya:before { content: "\E010" }
+.tokyo23 > .Shibuya:before { content: "\E011" }
+.tokyo23 > .Shinagawa:before { content: "\E012" }
+.tokyo23 > .Shinjuku:before { content: "\E013" }
+.tokyo23 > .Suginami:before { content: "\E014" }
+.tokyo23 > .Sumida:before { content: "\E015" }
+.tokyo23 > .Taito:before { content: "\E016" }
+.tokyo23 > .Toshima:before { content: "\E017" }
+.tokyo23-icon:before { content: "\E018" }

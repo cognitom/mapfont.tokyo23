@@ -1,0 +1,88 @@
+<html>
+  <head>
+    <title>mapfont.tokyo23</title>
+    <link href="./mapfont.tokyo23.css" rel="stylesheet">
+    <style>
+      body { font-family: Gill Sans; text-align: center; background: #f7f7f7 }
+      body > h1 { color: #666; margin: 3em 0; font-size: 160% }
+      body > h1 > i { font-size: 180%; vertical-align: middle; margin-right: .2em }
+      #map {
+        font-size: 460px;
+        margin: 0 auto; padding: 20px; color: #ccc; background: #fff; border-radius: 5px;
+      }
+      #map > .active { color: #60D2FF; }
+      #selector { width: 500px; padding: 0; list-style: none; margin: 15px auto; }
+      #selector > .active,
+      #selector > li:hover { background: #60D2FF }
+      #selector > li { font-size: 90%; border-radius: 3px; padding: 8px 0; margin:2px; width: 70px; background: #999; color: #fff; cursor: pointer; display: inline-block }
+    </style>
+  </head>
+  <body>
+    <h1><i class="tokyo23-icon"></i>mapfont.tokyo23</h1>
+    <ul id="map" class="tokyo23">
+      <li class="Adachi"></li>
+      <li class="Arakawa"></li>
+      <li class="Bunkyo"></li>
+      <li class="Chiyoda"></li>
+      <li class="Chuo"></li>
+      <li class="Edogawa"></li>
+      <li class="Itabashi"></li>
+      <li class="Katsushika"></li>
+      <li class="Kita"></li>
+      <li class="Koto"></li>
+      <li class="Meguro"></li>
+      <li class="Minato"></li>
+      <li class="Nakano"></li>
+      <li class="Nerima"></li>
+      <li class="Ota"></li>
+      <li class="Setagaya"></li>
+      <li class="Shibuya"></li>
+      <li class="Shinagawa"></li>
+      <li class="Shinjuku"></li>
+      <li class="Suginami"></li>
+      <li class="Sumida"></li>
+      <li class="Taito"></li>
+      <li class="Toshima"></li>
+    </ul>
+    <p>Click below to toggle.</p>
+    <ul id="selector">
+      <li class="Adachi" onclick="toggle('Adachi')">Adachi</li>
+      <li class="Arakawa" onclick="toggle('Arakawa')">Arakawa</li>
+      <li class="Bunkyo" onclick="toggle('Bunkyo')">Bunkyo</li>
+      <li class="Chiyoda" onclick="toggle('Chiyoda')">Chiyoda</li>
+      <li class="Chuo" onclick="toggle('Chuo')">Chuo</li>
+      <li class="Edogawa" onclick="toggle('Edogawa')">Edogawa</li>
+      <li class="Itabashi" onclick="toggle('Itabashi')">Itabashi</li>
+      <li class="Katsushika" onclick="toggle('Katsushika')">Katsushika</li>
+      <li class="Kita" onclick="toggle('Kita')">Kita</li>
+      <li class="Koto" onclick="toggle('Koto')">Koto</li>
+      <li class="Meguro" onclick="toggle('Meguro')">Meguro</li>
+      <li class="Minato" onclick="toggle('Minato')">Minato</li>
+      <li class="Nakano" onclick="toggle('Nakano')">Nakano</li>
+      <li class="Nerima" onclick="toggle('Nerima')">Nerima</li>
+      <li class="Ota" onclick="toggle('Ota')">Ota</li>
+      <li class="Setagaya" onclick="toggle('Setagaya')">Setagaya</li>
+      <li class="Shibuya" onclick="toggle('Shibuya')">Shibuya</li>
+      <li class="Shinagawa" onclick="toggle('Shinagawa')">Shinagawa</li>
+      <li class="Shinjuku" onclick="toggle('Shinjuku')">Shinjuku</li>
+      <li class="Suginami" onclick="toggle('Suginami')">Suginami</li>
+      <li class="Sumida" onclick="toggle('Sumida')">Sumida</li>
+      <li class="Taito" onclick="toggle('Taito')">Taito</li>
+      <li class="Toshima" onclick="toggle('Toshima')">Toshima</li>
+    </ul>
+    <script>
+      toggle = function(name) {
+        toggleClass(document.querySelector('#map>.'+name), 'active');
+        toggleClass(document.querySelector('#selector>.'+name), 'active');
+      };
+      toggleClass = function(element, className) {
+        var cn = element.className;
+        var re = new RegExp(' '+className);
+        element.className = re.test(cn) ? cn.replace(re, '') : cn+' '+className;
+      };
+      toggle('Setagaya');
+      toggle('Koto');
+      toggle('Minato');
+    </script>
+  </body>
+</html>
