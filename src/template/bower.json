@@ -1,0 +1,10 @@
+{
+  "name": "<%= meta.name %>",
+  "version": "<%= meta.version %>",
+  "main": "dist/<%= meta.name %>.css",
+  "description": "<%= meta.description %>",
+  "ignore": [
+    "src/",
+    "task/"
+  ]
+}

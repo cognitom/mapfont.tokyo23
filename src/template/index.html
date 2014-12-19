@@ -1,7 +1,7 @@
 <html>
   <head>
-    <title><%= fontName %></title>
-    <link href="<%= fontPath %><%= fontName %>.css" rel="stylesheet">
+    <title><%= meta.name %></title>
+    <link href="dist/<%= meta.name %>.css" rel="stylesheet">
     <style>
       body { font-family: Gill Sans; text-align: center; background: #f7f7f7 }
       body > h1 { color: #666; margin: 3em 0; font-size: 160% }
@@ -18,8 +18,8 @@
     </style>
   </head>
   <body>
-    <h1><i class="<%= className %>-icon"></i><%= fontName %></h1>
-    <ul id="map" class="<%= className %>"><% _.each(glyphs, function(glyph) { if (glyph.name != 'all') { %>
+    <h1><i class="<%= meta.mapfont.className %>-icon"></i><%= meta.name %></h1>
+    <ul id="map" class="<%= meta.mapfont.className %>"><% _.each(glyphs, function(glyph) { if (glyph.name != 'all') { %>
       <li class="<%= glyph.name %>"></li><% } }); %>
     </ul>
     <p>Click below to toggle.</p>

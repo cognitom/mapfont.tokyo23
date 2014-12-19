@@ -1,16 +1,31 @@
 {
+  "name": "mapfont.tokyo23",
+  "version": "1.0.0",
+  "homepage": "http://cognitom.github.io/mapfont.tokyo23",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:cognitom/mapfont.tokyo23.git"
+  },
+  "description": "東京23区の形を表現したWebフォント",
+  "mapfont": {
+    "className": "tokyo23"
+  },
   "devDependencies": {
     "coffee-script": "*",
+    "del": "*",
+    "run-sequence": "*",
     "require-dir": "*",
     "map-stream": "*",
     "merge-stream": "*",
     "lodash": "*",
+    "bower": "*",
     "gulp": "*",
     "gulp-sketch": "*",
     "gulp-replace": "*",
     "gulp-rename": "*",
     "gulp-iconfont": "*",
-    "gulp-consolidate": "*"
+    "gulp-consolidate": "*",
+    "gulp-zip": "*"
   },
   "private": true
 }

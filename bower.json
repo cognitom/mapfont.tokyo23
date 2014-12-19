@@ -1,0 +1,10 @@
+{
+  "name": "mapfont.tokyo23",
+  "version": "1.0.0",
+  "main": "dist/mapfont.tokyo23.css",
+  "description": "東京23区の形を表現したWebフォント",
+  "ignore": [
+    "src/",
+    "task/"
+  ]
+}

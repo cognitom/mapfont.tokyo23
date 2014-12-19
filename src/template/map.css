@@ -1,0 +1,41 @@
+@font-face {
+  font-family: "<%= meta.name %>";
+  src: url('<%= fontPath %><%= meta.name %>.eot');
+  src: url('<%= fontPath %><%= meta.name %>.eot?#iefix') format('eot'),
+    url('<%= fontPath %><%= meta.name %>.woff') format('woff'),
+    url('<%= fontPath %><%= meta.name %>.ttf') format('truetype'),
+    url('<%= fontPath %><%= meta.name %>.svg#<%= meta.name %>') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.<%= meta.mapfont.className %> > *,
+.<%= meta.mapfont.className %>-icon {
+  font-family: "<%= meta.name %>";
+  font-style: normal;
+  font-weight: normal;
+  display: inline-block;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.<%= meta.mapfont.className %> {
+  list-style: none;
+  display: block;
+  position: relative;
+  padding: 0;
+  width: 1em;
+  height: 1em;
+}
+
+.<%= meta.mapfont.className %> > * {
+  display: block;
+  position: absolute;
+}
+
+<% _.each(glyphs, function(glyph) { if (glyph.name == 'all') {
+  %>.<%= meta.mapfont.className %>-icon:before { content: "\<%= glyph.codepoint.toString(16).toUpperCase() %>" }
+<% } else {
+  %>.<%= meta.mapfont.className %> > .<%= glyph.name %>:before { content: "\<%= glyph.codepoint.toString(16).toUpperCase() %>" }
+<% } }); %>
